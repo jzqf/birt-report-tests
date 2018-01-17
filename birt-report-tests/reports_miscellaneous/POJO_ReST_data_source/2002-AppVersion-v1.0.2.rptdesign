@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.data.oda.pojo" name="test-reports-with-dependencies-POJO-Data-Source" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>SynchronizeClassPath</name>
+                    <value>true</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClassPath</name>
+                    <value>webcontent/qfree/jars/test-reports-with-dependencies.jar;</value>
+                </ex-property>
+            </list-property>
+            <property name="pojoDataSetClassPath">webcontent/qfree/jars/test-reports-with-dependencies.jar;</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.pojo.dataSet" name="RsAppVersion POJO Data Set" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">AppVersion</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">AppVersion</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">AppVersion</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">test-reports-with-dependencies-POJO-Data-Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">AppVersion</property>
+                    <property name="nativeName">AppVersion</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PojoQuery appContextKey="APP_CONTEXT_KEY_APPVERSION POJO DATA SET" dataSetClass="com.qfree.bo.test.birt.datasource.pojo.RsAppVersionPojoRestDataSource" version="1.0">
+    <ColumnMapping index="1" name="AppVersion" odaDataType="String">
+        <Method name="getAppVersion"/>
+    </ColumnMapping>
+</PojoQuery>
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AppVersion</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AppVersion</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>methodNameRegx</name>
+                    <value>get*</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClass</name>
+                    <value>com.qfree.bo.test.birt.datasource.dto.RsAppVersionResource</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label id="22">
+            <property name="fontWeight">bold</property>
+            <text-property name="text">2002-AppVersion-v1.0.2.rptdesign:  Uses: test-reports-with-dependencies.jar (in webcontent/qfree/jars/)</text-property>
+        </label>
+        <table id="6">
+            <property name="dataSet">RsAppVersion POJO Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">AppVersion</property>
+                    <text-property name="displayName">AppVersion</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["AppVersion"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="15"/>
+            <header>
+                <row id="7">
+                    <cell id="8">
+                        <label id="9">
+                            <text-property name="text">AppVersion</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="10">
+                    <cell id="11">
+                        <data id="12">
+                            <property name="resultSetColumn">AppVersion</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="13">
+                    <cell id="14"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

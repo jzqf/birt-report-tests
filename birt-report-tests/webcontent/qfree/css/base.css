@@ -1,0 +1,75 @@
+/*for all fonts that are not defined - black*/
+.report {
+
+font-family : sans-serif;
+font-size : small;
+font-weight : bold;
+color : #000000; /*black*/
+}
+
+.report-title {
+	font-family: sans-serif;
+	font-size: large;
+	font-weight: bold;
+	color: orange; /*black*/
+}
+
+/*standarni header v tabelah*/
+.q-free-table {
+
+background : #5C6C7B;
+font-size: small;
+font-weight: bold;
+color: #DEDCD3;
+}
+
+.q-free-header-row {
+
+background : #5C6C7B;/*dark gray*/
+font-size: small;
+font-weight: bold;
+color: #DEDCD3;/*light grey*/
+border-color: #5C6C7B;/*dark gray*/
+border-style: solid; 
+border-width: thin;
+}
+
+.q-free-data-row {
+
+background : #DEDCD3;
+font-size : x-small;
+font-weight : bold;
+color : #1C515A;
+border-color: #859CA1;
+border-style: solid; 
+border-width: thin;
+}
+
+.q-free-column-row {
+
+border-color: #5C6C7B;
+border-style: solid; 
+border-width: thin;
+}
+
+
+/*standardni podatki ki jih dobi� iz selecta (rows)*/
+.q-free-header-cell {
+
+background : #5C6C7B;
+font-size : small;
+font-weight : bold;
+color : #DEDCD3;
+border-color: #DEDCD3; 
+border-style: solid; 
+border-width: thin;
+}
+
+/*standardni podatki ki jih dobi� iz selecta (rows)*/
+.q-free-data-cell {
+
+background : #DEDCD3;
+font-size : x-small;
+font-weight : bold;
+color : #1C515A;
+}

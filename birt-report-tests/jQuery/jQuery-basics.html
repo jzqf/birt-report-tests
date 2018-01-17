@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <style>
+		a.test {
+		    font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+    <a href="http://jquery.com/">jQuery</a>
+    <script src="jquery-1.11.2.js"></script>
+    <script>
+ 
+    $( document ).ready(function() {
+    	$( "a" ).addClass( "test" );
+//    	$( "a" ).removeClass( "test" );
+        $( "a" ).click(function( event ) {
+//			alert( "Thanks for visiting!" );
+            alert( "The link will no longer take you to jquery.com" );
+            event.preventDefault();
+            $( this ).hide( "slow" );
+        });
+    });
+    
+//    if (typeof jQuery != 'undefined') {
+//        alert("jQuery library is loaded!");
+//    	alert("jQuery = " + jQuery);
+//    }else{
+//        alert("jQuery library is not found!");
+//    };
+    
+//    if (typeof $ != 'undefined') {
+//        alert("$ is defined");
+//    	alert("$ = " + $);
+//    }else{
+//        alert("$ is NOT defined!");
+//    };
+     
+//    if (typeof _$ != 'undefined') {
+//        alert("_$ is defined");
+//    	alert("_$ = " + _$);
+//    }else{
+//        alert("_$ is NOT defined!");
+//    };
+ 
+    </script>
+</body>
+</html>

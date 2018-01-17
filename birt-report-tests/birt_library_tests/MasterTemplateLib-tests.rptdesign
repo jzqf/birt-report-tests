@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">webcontent/qfree/libraries/MasterTemplateLib.rptlibrary</property>
+            <property name="namespace">MasterTemplateLib</property>
+        </structure>
+    </list-property>
+    <page-setup>
+        <simple-master-page name="MasterPage1" id="4" extends="MasterTemplateLib.MasterPage1">
+            <overridden-values>
+                <ref-entry baseId="6" id="6"/>
+                <ref-entry baseId="7" id="7"/>
+                <ref-entry baseId="43" id="43"/>
+                <ref-entry baseId="8" id="8"/>
+                <ref-entry baseId="9" id="9"/>
+                <ref-entry baseId="34" name="NewImage" id="34"/>
+                <ref-entry baseId="41" id="41"/>
+                <ref-entry baseId="11" id="11"/>
+                <ref-entry baseId="12" id="12"/>
+                <ref-entry baseId="42" id="42"/>
+                <ref-entry baseId="13" id="13"/>
+                <ref-entry baseId="14" id="14"/>
+                <ref-entry baseId="15" id="15"/>
+                <ref-entry baseId="16" id="16"/>
+                <ref-entry baseId="17" id="17"/>
+                <ref-entry baseId="18" id="18"/>
+                <ref-entry baseId="19" id="19"/>
+                <ref-entry baseId="20" id="20"/>
+                <ref-entry baseId="21" id="21"/>
+                <ref-entry baseId="22" id="22"/>
+                <ref-entry baseId="23" id="23"/>
+                <ref-entry baseId="24" id="24"/>
+                <ref-entry baseId="25" id="25"/>
+                <ref-entry baseId="26" id="26"/>
+                <ref-entry baseId="27" id="27"/>
+                <ref-entry baseId="28" id="28"/>
+                <ref-entry baseId="29" id="29"/>
+                <ref-entry baseId="30" id="30"/>
+                <ref-entry baseId="31" id="31"/>
+                <ref-entry baseId="32" id="32"/>
+                <ref-entry baseId="33" id="33"/>
+                <ref-entry baseId="36" id="36"/>
+                <ref-entry baseId="37" id="37"/>
+                <ref-entry baseId="40" name="NewText" id="40"/>
+                <ref-entry baseId="38" id="38"/>
+                <ref-entry baseId="44" name="NewText1" id="44"/>
+                <ref-entry baseId="39" id="39"/>
+            </overridden-values>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label id="35">
+            <property name="masterPage">MasterPage1</property>
+            <text-property name="text">This is a label</text-property>
+        </label>
+    </body>
+</report>

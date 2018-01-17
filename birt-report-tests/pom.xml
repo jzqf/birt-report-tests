@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.qfree.bo</groupId>
+		<artifactId>reporting-master</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<!-- <groupId>com.qfree.bo</groupId> -->
+	<artifactId>test-reports</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>BIRT Report Tests</name>
+	<description>Java project for general BIRT report testing</description>
+	<inceptionYear>2015</inceptionYear>
+	<organization>
+		<name>Q-Free ASA</name>
+		<url>http://www.q-free.com</url>
+	</organization>
+	<developers>
+		<developer>
+			<id>jeffreyz</id>
+			<name>Jeffrey Zelt</name>
+			<email>Jeffrey.Zelt@q-free.com</email>
+			<url>https://mysite.q-free.com/Person.aspx?accountname=Q-FREE%2ECOM%5CJeffreyZ</url>
+			<organization>Q-Free ASA</organization>
+			<organizationUrl>http://www.q-free.com</organizationUrl>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>+1</timezone>
+			<properties>
+				<skype>jeffreyz.q-free.com</skype>
+			</properties>
+		</developer>
+	</developers>
+	<!-- <issueManagement> -->
+	<!-- <system>JIRA</system> -->
+	<!-- <url>https://issues.q-free.com:8443/browse/QF15203</url> -->
+	<!-- </issueManagement> -->
+
+	<properties>
+		<test-report-datasources.version>0.5.2-SNAPSHOT</test-report-datasources.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.qfree.bo</groupId>
+			<artifactId>test-report-datasources</artifactId>
+			<version>${test-report-datasources.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+
+		<!-- "finalName" sets the context root of the deployed web application. 
+			Otherwise, the web app will be deployed at /<artifactId>-<version> -->
+		<finalName>test-reports</finalName>
+
+		<plugins>
+
+			<!-- The Maven Compiler Plugin is used to compile the sources of your 
+				project. This <plugin> element is used here to set the JVM source and target 
+				compliance level, as well as to set other parameters used by this plug-in. -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>2.4.3</version>
+				<configuration>
+					<!-- <minimizeJar>true</minimizeJar> <-Don't use -->
+					<!-- This is sets the name of the jar file generated -->
+					<finalName>${project.artifactId}-with-dependencies</finalName>
+					<!-- <finalName>${project.artifactId}-${project.version}-with-deps</finalName> -->
+					<artifactSet>
+						<excludes>
+							<!-- Some of these exclusions may need to be removed (commented out) 
+								at some point if exceptions are thrown when a POJO-based data previewed. 
+								The exclusions that are already commented out here are for dependencies that 
+								have been show to be necessary for POJO-based data sets that have been implemented 
+								so far. 
+								Some of these exclusions may no longer be needed because some
+								dependencies have been removed from project test-report-datasources. -->
+							<exclude>aopalliance:aopalliance</exclude>
+							<exclude>axis</exclude>
+							<!-- <exclude>ch.qos.logback</exclude> -->
+							<exclude>com.fasterxml:classmate</exclude>
+							<exclude>com.fasterxml.jackson.jaxrs</exclude>
+							<exclude>com.fasterxml.jackson.core</exclude>
+							<exclude>com.fasterxml.jackson.module</exclude>
+							<exclude>commons-cli</exclude>
+							<exclude>commons-codec</exclude>
+							<exclude>commons-discovery</exclude>
+							<exclude>commons-lang</exclude>
+							<exclude>commons-logging</exclude>
+							<exclude>dom4j:dom4j</exclude>
+							<exclude>javax.annotation</exclude>
+							<exclude>javax.servlet</exclude>
+							<exclude>junit</exclude>
+							<exclude>org.apache.axis</exclude>
+							<exclude>org.apache.poi</exclude>
+							<!-- <exclude>org.apache.tomcat.embed</exclude> -->
+							<!-- <exclude>org.apache.tomcat.embed:tomcat-embed-core</exclude> -->
+							<exclude>org.apache.tomcat.embed:tomcat-embed-el</exclude>
+							<exclude>org.apache.tomcat.embed:tomcat-embed-logging-juli</exclude>
+							<exclude>org.apache.tomcat.embed:tomcat-embed-websocket</exclude>
+							<exclude>org.apache.xmlbeans:xmlbeans</exclude>
+							<exclude>org.eclipse.birt.runtime</exclude>
+							<exclude>org.eclipse.birt.runtime.*</exclude>
+							<exclude>org.glassfish.hk2.*</exclude>
+							<!-- <exclude>org.glassfish.hk2</exclude> -->
+							<!-- <exclude>org.glassfish.hk2:hk2-api</exclude> -->
+							<!-- <exclude>org.glassfish.hk2:hk2-utils</exclude> -->
+							<!-- <exclude>org.glassfish.hk2:hk2-locator</exclude> -->
+							<!-- <exclude>org.glassfish.hk2:hk2-utils</exclude> -->
+							<!-- <exclude>org.glassfish.jersey.bundles.repackaged:jersey-guava</exclude> -->
+							<exclude>org.glassfish.hk2:osgi-resource-locator</exclude>
+							<exclude>org.glassfish.jersey.containers</exclude>	<!-- JAX-RS server -->
+							<exclude>org.glassfish.jersey.core:jersey-server</exclude>
+							<exclude>org.glassfish.jersey.media:jersey-media-json-jackson</exclude>
+							<exclude>org.hibernate:hibernate-validator</exclude>
+							<exclude>org.javassist:javassist</exclude>
+							<exclude>org.jboss.logging:jboss-logging</exclude>
+							<exclude>org.jvnet:tiger-types</exclude>
+							<exclude>org.milyn</exclude>
+							<!-- <exclude>org.slf4j</exclude> -->
+							<exclude>org.springframework.boot</exclude>
+							<exclude>org.springframework.data</exclude>
+							<exclude>org.yaml:snakeyaml</exclude>
+							<exclude>stax:stax-api</exclude>
+							<exclude>xml-apis:xml-apis</exclude>
+						</excludes>
+					</artifactSet>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>

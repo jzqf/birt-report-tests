@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">8</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.data.oda.pojo" name="OboFlowStepManagers_RestPojo" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>SynchronizeClassPath</name>
+                    <value>true</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClassPath</name>
+                    <value>target/test-reports-with-dependencies.jar;</value>
+                </ex-property>
+            </list-property>
+            <property name="pojoDataSetClassPath">target/test-reports-with-dependencies.jar;</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.pojo.dataSet" name="OboFlowManager_DataSet" id="8">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Manager_Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Manager_Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Manager_NumberOfProcessedPassages</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Manager_NumberOfProcessedPassages</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Manager_NumberOfFailedPassages</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Manager_NumberOfFailedPassages</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Manager_TotalTimeSpent</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Manager_TotalTimeSpent</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Manager_ChildrenCount</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Manager_ChildrenCount</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Step_Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Step_Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Step_NumberOfProcessedPassages</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Step_NumberOfProcessedPassages</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Step_NumberOfFailedPassages</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Step_NumberOfFailedPassages</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Step_TotalTimeSpent</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Step_TotalTimeSpent</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Step_ChildrenCount</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Step_ChildrenCount</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Manager_Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Manager_NumberOfProcessedPassages</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Manager_NumberOfFailedPassages</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Manager_TotalTimeSpent</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Manager_ChildrenCount</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Step_Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Step_NumberOfProcessedPassages</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Step_NumberOfFailedPassages</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Step_TotalTimeSpent</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Step_ChildrenCount</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">OboFlowStepManagers_RestPojo</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Manager_Name</property>
+                    <property name="nativeName">Manager_Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Manager_NumberOfProcessedPassages</property>
+                    <property name="nativeName">Manager_NumberOfProcessedPassages</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Manager_NumberOfFailedPassages</property>
+                    <property name="nativeName">Manager_NumberOfFailedPassages</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Manager_TotalTimeSpent</property>
+                    <property name="nativeName">Manager_TotalTimeSpent</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Manager_ChildrenCount</property>
+                    <property name="nativeName">Manager_ChildrenCount</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Step_Name</property>
+                    <property name="nativeName">Step_Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Step_NumberOfProcessedPassages</property>
+                    <property name="nativeName">Step_NumberOfProcessedPassages</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Step_NumberOfFailedPassages</property>
+                    <property name="nativeName">Step_NumberOfFailedPassages</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Step_TotalTimeSpent</property>
+                    <property name="nativeName">Step_TotalTimeSpent</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Step_ChildrenCount</property>
+                    <property name="nativeName">Step_ChildrenCount</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PojoQuery appContextKey="APP_CONTEXT_KEY_OBOFLOWMANAGER_DATASET" dataSetClass="com.qfree.bo.test.birt.datasource.pojo.OboFlowStepManagersRestDS" version="1.0">
+    <ClassColumnMappings>
+        <ColumnMapping index="1" name="Manager_Name" odaDataType="String">
+            <Method name="getName"/>
+        </ColumnMapping>
+        <ColumnMapping index="2" name="Manager_NumberOfProcessedPassages" odaDataType="Integer">
+            <Method name="getNumberOfProcessedPassages"/>
+        </ColumnMapping>
+        <ColumnMapping index="3" name="Manager_NumberOfFailedPassages" odaDataType="Integer">
+            <Method name="getNumberOfFailedPassages"/>
+        </ColumnMapping>
+        <ColumnMapping index="4" name="Manager_TotalTimeSpent" odaDataType="Integer">
+            <Method name="getTotalTimeSpent"/>
+        </ColumnMapping>
+        <ColumnMapping index="5" name="Manager_ChildrenCount" odaDataType="Integer">
+            <Method name="getChildrenCount"/>
+        </ColumnMapping>
+        <Method name="getOboFlowManager"/>
+    </ClassColumnMappings>
+    <ClassColumnMappings>
+        <ColumnMapping index="6" name="Step_Name" odaDataType="String">
+            <Method name="getName"/>
+        </ColumnMapping>
+        <ColumnMapping index="7" name="Step_NumberOfProcessedPassages" odaDataType="Integer">
+            <Method name="getNumberOfProcessedPassages"/>
+        </ColumnMapping>
+        <ColumnMapping index="8" name="Step_NumberOfFailedPassages" odaDataType="Integer">
+            <Method name="getNumberOfFailedPassages"/>
+        </ColumnMapping>
+        <ColumnMapping index="9" name="Step_TotalTimeSpent" odaDataType="Integer">
+            <Method name="getTotalTimeSpent"/>
+        </ColumnMapping>
+        <ColumnMapping index="10" name="Step_ChildrenCount" odaDataType="Integer">
+            <Method name="getChildrenCount"/>
+        </ColumnMapping>
+        <Method name="getOboStepManager"/>
+    </ClassColumnMappings>
+</PojoQuery>
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Manager_Name</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Manager_Name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Manager_NumberOfProcessedPassages</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Manager_NumberOfProcessedPassages</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Manager_NumberOfFailedPassages</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Manager_NumberOfFailedPassages</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Manager_TotalTimeSpent</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Manager_TotalTimeSpent</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Manager_ChildrenCount</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Manager_ChildrenCount</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Step_Name</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Step_Name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>methodNameRegx</name>
+                    <value>get*</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClass</name>
+                    <value>com.qfree.bo.test.birt.datasource.pojo.OboFlowStepManagersRestDS</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="9">
+            <property name="dataSet">OboFlowManager_DataSet</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Manager_Name</property>
+                    <text-property name="displayName">Manager_Name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Manager_Name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Manager_NumberOfProcessedPassages</property>
+                    <text-property name="displayName">Manager_NumberOfProcessedPassages</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Manager_NumberOfProcessedPassages"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Manager_NumberOfFailedPassages</property>
+                    <text-property name="displayName">Manager_NumberOfFailedPassages</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Manager_NumberOfFailedPassages"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Manager_TotalTimeSpent</property>
+                    <text-property name="displayName">Manager_TotalTimeSpent</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Manager_TotalTimeSpent"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Manager_ChildrenCount</property>
+                    <text-property name="displayName">Manager_ChildrenCount</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Manager_ChildrenCount"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Step_Name</property>
+                    <text-property name="displayName">Step_Name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Step_Name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Step_NumberOfProcessedPassages</property>
+                    <text-property name="displayName">Step_NumberOfProcessedPassages</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Step_NumberOfProcessedPassages"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Step_NumberOfFailedPassages</property>
+                    <text-property name="displayName">Step_NumberOfFailedPassages</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Step_NumberOfFailedPassages"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Step_TotalTimeSpent</property>
+                    <text-property name="displayName">Step_TotalTimeSpent</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Step_TotalTimeSpent"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Step_ChildrenCount</property>
+                    <text-property name="displayName">Step_ChildrenCount</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Step_ChildrenCount"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <column id="63"/>
+            <column id="64"/>
+            <column id="65"/>
+            <column id="66"/>
+            <column id="67"/>
+            <column id="68"/>
+            <column id="69"/>
+            <column id="70"/>
+            <column id="71"/>
+            <column id="72"/>
+            <header>
+                <row id="10">
+                    <cell id="11">
+                        <label id="12">
+                            <text-property name="text">Manager_Name</text-property>
+                        </label>
+                    </cell>
+                    <cell id="13">
+                        <label id="14">
+                            <text-property name="text">Manager_NumberOfProcessedPassages</text-property>
+                        </label>
+                    </cell>
+                    <cell id="15">
+                        <label id="16">
+                            <text-property name="text">Manager_NumberOfFailedPassages</text-property>
+                        </label>
+                    </cell>
+                    <cell id="17">
+                        <label id="18">
+                            <text-property name="text">Manager_TotalTimeSpent</text-property>
+                        </label>
+                    </cell>
+                    <cell id="19">
+                        <label id="20">
+                            <text-property name="text">Manager_ChildrenCount</text-property>
+                        </label>
+                    </cell>
+                    <cell id="21">
+                        <label id="22">
+                            <text-property name="text">Step_Name</text-property>
+                        </label>
+                    </cell>
+                    <cell id="23">
+                        <label id="24">
+                            <text-property name="text">Step_NumberOfProcessedPassages</text-property>
+                        </label>
+                    </cell>
+                    <cell id="25">
+                        <label id="26">
+                            <text-property name="text">Step_NumberOfFailedPassages</text-property>
+                        </label>
+                    </cell>
+                    <cell id="27">
+                        <label id="28">
+                            <text-property name="text">Step_TotalTimeSpent</text-property>
+                        </label>
+                    </cell>
+                    <cell id="29">
+                        <label id="30">
+                            <text-property name="text">Step_ChildrenCount</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <group id="73">
+                <property name="groupName">FlowManager</property>
+                <expression name="keyExpr" type="javascript">row["Manager_Name"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["Manager_Name"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="74">
+                        <cell id="75">
+                            <data id="96">
+                                <property name="resultSetColumn">Manager_Name</property>
+                            </data>
+                        </cell>
+                        <cell id="76">
+                            <data id="35">
+                                <property name="resultSetColumn">Manager_NumberOfProcessedPassages</property>
+                            </data>
+                        </cell>
+                        <cell id="77">
+                            <data id="37">
+                                <property name="resultSetColumn">Manager_NumberOfFailedPassages</property>
+                            </data>
+                        </cell>
+                        <cell id="78">
+                            <data id="39">
+                                <property name="resultSetColumn">Manager_TotalTimeSpent</property>
+                            </data>
+                        </cell>
+                        <cell id="79">
+                            <data id="41">
+                                <property name="resultSetColumn">Manager_ChildrenCount</property>
+                            </data>
+                        </cell>
+                        <cell id="80"/>
+                        <cell id="81"/>
+                        <cell id="82"/>
+                        <cell id="83"/>
+                        <cell id="84"/>
+                    </row>
+                </header>
+                <footer>
+                    <row id="85">
+                        <cell id="86"/>
+                        <cell id="87"/>
+                        <cell id="88"/>
+                        <cell id="89"/>
+                        <cell id="90"/>
+                        <cell id="91"/>
+                        <cell id="92"/>
+                        <cell id="93"/>
+                        <cell id="94"/>
+                        <cell id="95"/>
+                    </row>
+                </footer>
+            </group>
+            <detail>
+                <row id="31">
+                    <cell id="32"/>
+                    <cell id="34"/>
+                    <cell id="36"/>
+                    <cell id="38"/>
+                    <cell id="40"/>
+                    <cell id="42">
+                        <data id="43">
+                            <property name="resultSetColumn">Step_Name</property>
+                        </data>
+                    </cell>
+                    <cell id="44">
+                        <data id="45">
+                            <property name="resultSetColumn">Step_NumberOfProcessedPassages</property>
+                        </data>
+                    </cell>
+                    <cell id="46">
+                        <data id="47">
+                            <property name="resultSetColumn">Step_NumberOfFailedPassages</property>
+                        </data>
+                    </cell>
+                    <cell id="48">
+                        <data id="49">
+                            <property name="resultSetColumn">Step_TotalTimeSpent</property>
+                        </data>
+                    </cell>
+                    <cell id="50">
+                        <data id="51">
+                            <property name="resultSetColumn">Step_ChildrenCount</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="52">
+                    <cell id="53"/>
+                    <cell id="54"/>
+                    <cell id="55"/>
+                    <cell id="56"/>
+                    <cell id="57"/>
+                    <cell id="58"/>
+                    <cell id="59"/>
+                    <cell id="60"/>
+                    <cell id="61"/>
+                    <cell id="62"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

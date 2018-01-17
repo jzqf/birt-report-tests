@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="rp_boolean_value" id="57">
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">False</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="rp_decimal_value" id="58">
+            <property name="valueType">static</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">123.456</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="rp_float_value" id="59">
+            <property name="valueType">static</property>
+            <property name="dataType">float</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">789.012</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="rp_integer_value" id="60">
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">123</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="rp_from_datetime" id="61">
+            <property name="valueType">static</property>
+            <property name="dataType">dateTime</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2017-01-31 06:30:00.001</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Custom</property>
+                <property name="pattern">yyyy-MM-dd HH:mm:ss</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="rp_to_datetime" id="62">
+            <property name="valueType">static</property>
+            <property name="dataType">dateTime</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2017-01-31 16:30:59.999</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Custom</property>
+                <property name="pattern">yyyy-MM-dd HH:mm:ss</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="rp_from_date" id="63">
+            <property name="valueType">static</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2017-01-01</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Custom</property>
+                <property name="pattern">yyyy-MM-dd</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="rp_to_date" id="64">
+            <property name="valueType">static</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2017-01-31</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Custom</property>
+                <property name="pattern">yyyy-MM-dd</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="rp_from_time" id="65">
+            <property name="valueType">static</property>
+            <property name="dataType">time</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">06:30:01</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Custom</property>
+                <property name="pattern">HH:mm:ss</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="rp_to_time" id="66">
+            <property name="valueType">static</property>
+            <property name="dataType">time</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">16:29:59</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Custom</property>
+                <property name="pattern">HH:mm:ss</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.data.oda.pojo" name="test-reports-with-dependencies-POJO-Data-Source" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>SynchronizeClassPath</name>
+                    <value>true</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClassPath</name>
+                    <value>webcontent/qfree/jars/test-reports-with-dependencies.jar;</value>
+                </ex-property>
+            </list-property>
+            <property name="pojoDataSetClassPath">webcontent/qfree/jars/test-reports-with-dependencies.jar;</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.pojo.dataSet" name="RoleList POJO Data Set" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">RoleId</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">RoleId</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Username</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Username</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">EmailAddress</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">EmailAddress</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CreatedOn</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">CreatedOn</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Href</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Href</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">dsp_boolean_value</property>
+                    <property name="paramName">rp_boolean_value</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">boolean</property>
+                    <property name="nativeDataType">0</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">dsp_decimal_value</property>
+                    <property name="paramName">rp_decimal_value</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">0</property>
+                    <property name="position">2</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">dsp_float_value</property>
+                    <property name="paramName">rp_float_value</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">0</property>
+                    <property name="position">3</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">dsp_integer_value</property>
+                    <property name="paramName">rp_integer_value</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">0</property>
+                    <property name="position">4</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">dsp_from_datetime</property>
+                    <property name="paramName">rp_from_datetime</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">dateTime</property>
+                    <property name="nativeDataType">0</property>
+                    <property name="position">5</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">dsp_to_datetime</property>
+                    <property name="paramName">rp_to_datetime</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">dateTime</property>
+                    <property name="nativeDataType">0</property>
+                    <property name="position">6</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">dsp_from_date</property>
+                    <property name="paramName">rp_from_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">0</property>
+                    <property name="position">7</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">dsp_to_date</property>
+                    <property name="paramName">rp_to_date</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">0</property>
+                    <property name="position">8</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">dsp_from_time</property>
+                    <property name="paramName">rp_from_time</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">time</property>
+                    <property name="nativeDataType">0</property>
+                    <property name="position">9</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">dsp_to_time</property>
+                    <property name="paramName">rp_to_time</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">time</property>
+                    <property name="nativeDataType">0</property>
+                    <property name="position">10</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">RoleId</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Username</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">EmailAddress</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">CreatedOn</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Href</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">test-reports-with-dependencies-POJO-Data-Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">RoleId</property>
+                    <property name="nativeName">RoleId</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Username</property>
+                    <property name="nativeName">Username</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">EmailAddress</property>
+                    <property name="nativeName">EmailAddress</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">CreatedOn</property>
+                    <property name="nativeName">CreatedOn</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Href</property>
+                    <property name="nativeName">Href</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PojoQuery appContextKey="APP_CONTEXT_KEY_DATA SET" dataSetClass="com.qfree.bo.test.birt.datasource.pojo.RsRoleListPojoRestDataSource" version="1.0">
+    <ColumnMapping index="1" name="RoleId" odaDataType="String">
+        <Method name="getRoleId"/>
+    </ColumnMapping>
+    <ColumnMapping index="2" name="Username" odaDataType="String">
+        <Method name="getUsername"/>
+    </ColumnMapping>
+    <ColumnMapping index="3" name="EmailAddress" odaDataType="String">
+        <Method name="getEmailAddress"/>
+    </ColumnMapping>
+    <ColumnMapping index="4" name="CreatedOn" odaDataType="Date">
+        <Method name="getCreatedOn"/>
+    </ColumnMapping>
+    <ColumnMapping index="5" name="Href" odaDataType="String">
+        <Method name="getHref"/>
+    </ColumnMapping>
+</PojoQuery>
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>RoleId</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>RoleId</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Username</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Username</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>EmailAddress</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>EmailAddress</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Href</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Href</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>methodNameRegx</name>
+                    <value>get*</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClass</name>
+                    <value>com.qfree.bo.test.birt.datasource.dto.RsRoleResource</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label id="22">
+            <property name="fontWeight">bold</property>
+            <text-property name="text">2001-report-server-roles-v1.0.7.rptdesign:  Uses: test-reports-with-dependencies.jar (in webcontent/qfree/jars/), RsRoleListPojoRestDataSource - This will not work from the report server because the ReST endpoint does not exist there!</text-property>
+        </label>
+        <table id="23">
+            <property name="dataSet">RoleList POJO Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">RoleId</property>
+                    <text-property name="displayName">RoleId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RoleId"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Username</property>
+                    <text-property name="displayName">Username</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Username"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">EmailAddress</property>
+                    <text-property name="displayName">EmailAddress</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["EmailAddress"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CreatedOn</property>
+                    <text-property name="displayName">CreatedOn</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CreatedOn"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">Href</property>
+                    <text-property name="displayName">Href</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Href"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="52"/>
+            <column id="53"/>
+            <column id="54"/>
+            <column id="55"/>
+            <column id="56"/>
+            <header>
+                <row id="24">
+                    <cell id="25">
+                        <label id="26">
+                            <text-property name="text">RoleId</text-property>
+                        </label>
+                    </cell>
+                    <cell id="27">
+                        <label id="28">
+                            <text-property name="text">Username</text-property>
+                        </label>
+                    </cell>
+                    <cell id="29">
+                        <label id="30">
+                            <text-property name="text">EmailAddress</text-property>
+                        </label>
+                    </cell>
+                    <cell id="31">
+                        <label id="32">
+                            <text-property name="text">CreatedOn</text-property>
+                        </label>
+                    </cell>
+                    <cell id="33">
+                        <label id="34">
+                            <text-property name="text">Href</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="35">
+                    <cell id="36">
+                        <data id="37">
+                            <property name="resultSetColumn">RoleId</property>
+                        </data>
+                    </cell>
+                    <cell id="38">
+                        <data id="39">
+                            <property name="resultSetColumn">Username</property>
+                        </data>
+                    </cell>
+                    <cell id="40">
+                        <data id="41">
+                            <property name="resultSetColumn">EmailAddress</property>
+                        </data>
+                    </cell>
+                    <cell id="42">
+                        <data id="43">
+                            <property name="resultSetColumn">CreatedOn</property>
+                        </data>
+                    </cell>
+                    <cell id="44">
+                        <data id="45">
+                            <property name="resultSetColumn">Href</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="46">
+                    <cell id="47"/>
+                    <cell id="48"/>
+                    <cell id="49"/>
+                    <cell id="50"/>
+                    <cell id="51"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>
